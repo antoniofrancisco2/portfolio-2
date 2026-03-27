@@ -31,6 +31,9 @@ projetos.forEach(projeto => {
   container.appendChild(div);
 });
 
+
+
+
 const hamburguer = document.getElementById("hamburguer");
 const menu = document.getElementById("menu");
 
@@ -45,4 +48,40 @@ document.querySelectorAll(".menu a").forEach(link => {
         hamburguer.classList.remove("active");
         menu.classList.remove("active");
     });
+});
+
+
+
+const habilidades = [
+  {
+    nome: "HTML",
+    descricao: "Estruturação de páginas web",
+    cor: "#e34c26"
+  },
+  {
+    nome: "CSS",
+    descricao: "Estilização e responsividade",
+    cor: "#264de4"
+  },
+  {
+    nome: "JavaScript",
+    descricao: "Interatividade e lógica",
+    cor: "#f0db4f"
+  }
+];
+
+const containerHab = document.getElementById("lista-habilidades");
+
+habilidades.forEach(hab => {
+  const div = document.createElement("div");
+  div.classList.add("skill-card"); // MUITO IMPORTANTE
+
+  div.innerHTML = `
+    <h3>${hab.nome}</h3>
+    <p>${hab.descricao}</p>
+  `;
+
+  div.style.setProperty("--cor-skill", hab.cor);
+
+  containerHab.appendChild(div);
 });
