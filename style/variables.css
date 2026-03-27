@@ -1,0 +1,37 @@
+:root {
+    /*Cores*/
+    --Fundo-principal: #0f172a; 
+    --Fundo-secundário-cards: #1e293b;
+    --Cor-principal-destaque: #3b82f6; 
+    --Cor-secundária: #9333ea;
+    --Cor-de-destaque: #ec4899;
+    --Texto-principal: #ffffff;
+    --Texto-secundário: #94a3b8;
+
+    /* ===== FONTES ===== */
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Inter', sans-serif;
+
+    /* ===== PESOS ===== */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* ===== TAMANHOS ===== */
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.9rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.8rem;
+    --fs-xxl: 2.5rem;
+
+    /* ===== LINHA ===== */
+    --lh-normal: 1.5;
+    --lh-title: 1.2;
+
+    /* ===== ESPAÇAMENTO DE LETRA ===== */
+    --ls-normal: 0;
+    --ls-wide: 0.5px;
+}

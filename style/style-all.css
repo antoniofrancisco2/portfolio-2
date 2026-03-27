@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+html, body {
+    background-color: var(--Fundo-principal);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* LOGO */
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+/* HAMBURGUER */
+.hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburguer span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* ANIMAÇÃO X */
+.hamburguer.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburguer.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MENU */
+.menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    list-style-type: none;
+
+    width: 200px;
+    padding: 20px;
+
+    background: #1e293b;
+    border-radius: 10px 0 0 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    /* ESCONDIDO */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: 0.3s;
+}
+
+/* MENU ATIVO */
+.menu.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+/* LINKS */
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* HERO */
+.hero {
+    padding: 60px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 15px;
+    
+}
+
+#img1 {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+
+    background-image: url(../imagens/imgwndral-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    margin-top: 30px;
+}
+
+/* "Olá, sou" */
+.hero p {
+    font-size: 0.9rem;
+    color: var(--Texto-secundário);
+    margin: 0px;
+}
+
+/* Nome */
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: var(--font-title);
+
+    background: linear-gradient(
+        45deg,
+        var(--Cor-principal-destaque),
+        var(--Cor-secundária),
+        var(--Cor-de-destaque)
+    );
+    margin: 0px;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Cargo */
+.hero p:nth-child(3) {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--Texto-principal);
+    margin: 0px;
+}
+
+/* Descrição */
+.hero p:nth-child(4) {
+    font-size: 1rem;
+    color: var(--Texto-secundário);
+    line-height: 1.6;
+}
