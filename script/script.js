@@ -1,17 +1,20 @@
 const projetos = [
   {
-    nome: "CloudHost",
-    descricao: "Plataforma de hospedagem moderna.",
+    nome: "Cafeteria",
+    descricao: "cafeteria dos sonhos",
+    imagem: "imagens/download.jpg",
     link: "#"
   },
   {
     nome: "MixOn",
     descricao: "E-commerce completo.",
+    imagem: "imagens/mixon.png",
     link: "#"
   },
   {
     nome: "InfoPrime",
     descricao: "Assistência técnica.",
+    imagem: "imagens/infoprime.png",
     link: "#"
   }
 ];
@@ -50,38 +53,15 @@ document.querySelectorAll(".menu a").forEach(link => {
     });
 });
 
+window.sr = new ScrollReveal();
+
+    sr.reveal('.skills');
+    sr.reveal('#html-skill', { delay: 400 });
+    sr.reveal('#css-skill', { delay: 500 });
+    sr.reveal('#js-skill', { delay: 600 });
 
 
-const habilidades = [
-  {
-    nome: "HTML",
-    descricao: "Estruturação de páginas web",
-    cor: "#e34c26"
-  },
-  {
-    nome: "CSS",
-    descricao: "Estilização e responsividade",
-    cor: "#264de4"
-  },
-  {
-    nome: "JavaScript",
-    descricao: "Interatividade e lógica",
-    cor: "#f0db4f"
-  }
-];
+    window.sr = new ScrollReveal();
 
-const containerHab = document.getElementById("lista-habilidades");
-
-habilidades.forEach(hab => {
-  const div = document.createElement("div");
-  div.classList.add("skill-card"); // MUITO IMPORTANTE
-
-  div.innerHTML = `
-    <h3>${hab.nome}</h3>
-    <p>${hab.descricao}</p>
-  `;
-
-  div.style.setProperty("--cor-skill", hab.cor);
-
-  containerHab.appendChild(div);
-});
+    sr.reveal('#cards');
+    

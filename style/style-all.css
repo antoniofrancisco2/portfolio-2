@@ -205,78 +205,173 @@ html, body {
     text-align: justify;
 }
 
-/* GRID */
-.skills-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+/* Seção de Habilidades */
+.skills {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--cor3);
 }
 
-/* CARD */
-.skill-card {
+.skills h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Container das caixas */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+/* Estilo das caixas */
+.skill-box {
     position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    border-radius: 12px;
-
-    background: var(--Fundo-secundário-cards);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
-/* NOME */
-.skill-card h3 {
-    font-size: 1.2rem;
+.skill-box.wide {
+    grid-column: span 2; /* Ocupa duas colunas em telas grandes */
 }
 
-/* DESCRIÇÃO */
-.skill-card p {
-    font-size: 0.85rem;
-    color: var(--Texto-secundário);
+/* Ícones */
+.skill-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
 
+/* Animação ao passar o mouse */
+.skill-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*.skill-box:hover i {
+    color: var(--cor2); /* Muda a cor do ícone ao passar o mouse 
+}*/
+
+#html-skill:hover i {
+    color: #E34F26;
+}
+
+#css-skill:hover i {
+    color: #1572B6;
+}
+
+#js-skill:hover i {
+    color: #F7DF1E;
+}
+
+/* Texto da caixa */
+.skill-box h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill-box p {
+    margin: 0;
+    color: #555;
     opacity: 0;
-    transform: translateY(10px);
-
-    transition: 0.3s;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* LINHA DE COR */
-.skill-card::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 0%;
-    height: 4px;
-
-    background: var(--cor-skill);
-    transition: 0.3s;
-}
-
-/* HOVER */
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-/* MOSTRA TEXTO */
-.skill-card:hover p {
+/* Exibir texto ao passar o mouse */
+.skill-box:hover p {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* LINHA ANIMA */
-.skill-card:hover::before {
-    width: 100%;
+/* Responsividade para versão mobile */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+
+    .skill-box.wide {
+        grid-column: span 2; /* Ocupa toda a linha na versão mobile */
+    }
 }
 
-/* GLOW */
-.skill-card:hover {
-    box-shadow: 0 0 15px var(--cor-skill);
+
+.section h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-title);
+    font-weight: var(--fw-semibold);
+
+    color: var(--Texto-principal);
+
+    position: relative;
+}
+
+/* LINHA DECORATIVA */
+.section h2::after {
+    content: "";
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background: linear-gradient(
+        45deg,
+        var(--Cor-principal-destaque),
+        var(--Cor-secundária)
+    );
+
+    border-radius: 5px;
+}
+
+#lista-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projeto {
+    background: var(--Fundo-secundário-cards);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.projeto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.projeto h3 {
+    margin: 10px 0 5px;
+    color: var(--Texto-principal);
+}
+
+.projeto p {
+    font-size: 0.9rem;
+    color: var(--Texto-secundário);
+}
+
+.projeto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+
+    background: var(--Cor-principal-destaque);
+    color: white;
+
+    border-radius: 5px;
+    text-decoration: none;
 }

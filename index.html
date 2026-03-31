@@ -55,19 +55,39 @@
     </section>
 
     <!-- HABILIDADES -->
-    <section id="habilidades" class="section">
-        <h2>Habilidades</h2>
-
-        <div id="lista-habilidades" class="skills-cards"></div>
+    <section class="skills">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-container">
+            <!-- Caixa HTML -->
+            <div class="skill-box" id="html-skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Criação de estruturas de páginas responsivas e acessíveis.</p>
+            </div>
+    
+            <!-- Caixa CSS -->
+            <div class="skill-box" id="css-skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Estilização avançada, animações e design responsivo.</p>
+            </div>
+    
+            <!-- Caixa JavaScript -->
+            <div class="skill-box wide" id="js-skill">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+                <p>Desenvolvimento de funcionalidades interativas e dinâmicas.</p>
+            </div>
+        </div>
     </section>
 
 
 
     <!-- PROJETOS (dinâmico) -->
-    <section id="projetos" class="section">
+    <section id="projetoss" class="section">
         <h2>Projetos</h2>
 
-        <div id="lista-projetos" class="cards"></div>
+        <div id="lista-projetos"></div>
     </section>
 
     <!-- CONTATO -->
@@ -83,5 +103,40 @@
 </footer>
 
 <script src="script/script.js"></script>
+
+<script>
+    const projetoss = [
+  {
+    nome: "Cafeteria",
+    descricao: "Site moderno para uma cafeteria.",
+    imagem: "../imagens/download",
+    link: "https://exemplo.com"
+  },
+  {
+    nome: "Portfólio",
+    descricao: "Meu portfólio pessoal.",
+    imagem: "imagens/portfolio.png",
+    link: "https://exemplo.com"
+  }
+];
+
+const lista = document.getElementById("lista-projetos");
+
+lista.innerHTML = "";
+
+projetos.forEach(proj => {
+  const card = document.createElement("div");
+  card.classList.add("projeto");
+
+  card.innerHTML = `
+    <img src="${proj.imagem}" alt="${proj.nome}">
+    <h3>${proj.nome}</h3>
+    <p>${proj.descricao}</p>
+    <a href="${proj.link}" target="_blank">Ver projeto</a>
+  `;
+
+  lista.appendChild(card);
+});
+</script>
 </body>
 </html>
