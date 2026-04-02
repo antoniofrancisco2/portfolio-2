@@ -375,3 +375,119 @@ html, body {
     border-radius: 5px;
     text-decoration: none;
 }
+
+/* TÍTULO */
+#contato h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-title);
+    font-weight: var(--fw-semibold);
+
+    color: var(--Texto-principal);
+
+    position: relative;
+}
+
+/* LINHA */
+#contato h2::after {
+    content: "";
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    background: linear-gradient(
+        45deg,
+        var(--Cor-principal-destaque),
+        var(--Cor-secundária)
+    );
+
+    border-radius: 5px;
+}
+
+/* FORM */
+.form-contato {
+    margin-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUTS */
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: var(--Fundo-secundário-cards);
+    color: var(--Texto-principal);
+
+    font-family: var(--font-text);
+}
+
+/* TEXTAREA */
+.form-contato textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* FOCO */
+.form-contato input:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: var(--Cor-principal-destaque);
+}
+
+/* BOTÃO */
+.form-contato .btn {
+    border: none;
+    cursor: pointer;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        45deg,
+        var(--Cor-principal-destaque),
+        var(--Cor-secundária)
+    );
+
+    color: white;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+.form-contato .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(255,255,255,0.02)
+    );
+}
+
+/* TEXTO */
+footer p {
+    font-size: 0.9rem;
+    color: var(--Texto-secundário);
+}
