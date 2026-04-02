@@ -9,12 +9,40 @@ html, body {
     max-width: 100%;
 }
 
+/* HEADER FIXO */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(15, 23, 42, 0.4); /* transparente */
+    backdrop-filter: blur(5px);
+
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+header.scroll {
+     background: rgba(15, 23, 42, 0.9); /* mais sólido */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+main {
+    margin-top: 70px; /* ajuste conforme altura do menu */
+}
+
 /* NAV */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 1px 20px;
 }
 
 /* LOGO */
@@ -89,6 +117,10 @@ html, body {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+}
+
+main {
+    margin-top: 70px; /* ajuste conforme altura do menu */
 }
 
 /* HERO */
@@ -307,6 +339,11 @@ html, body {
     }
 }
 
+
+/*PROJETOS*/
+.section {
+    padding: 10px;
+}
 
 .section h2 {
     font-size: 1.8rem;

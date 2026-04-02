@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style/style-all.css">
     <link rel="stylesheet" href="style/media-queries.css">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -29,7 +31,7 @@
     <ul class="menu" id="menu">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#projetoss">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
     </ul>
 </nav>
@@ -38,7 +40,7 @@
 <main>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" class="hero reveal">
         <p>Olá, sou</p>
         <h1>Antônio Francisco</h1>
         <p>Desenvolvedor Front-End</p>
@@ -47,7 +49,7 @@
     </section>
 
     <!-- SOBRE -->
-    <section id="sobre" class="section">
+    <section id="sobre" class="section" class="section reveal">
         <h2>Sobre mim</h2>
         <p>
             Sou um desenvolvedor Front-End júnior, apaixonado por criar interfaces modernas, funcionais e intuitivas que proporcionam uma experiência incrível para os usuários. Minha jornada no mundo da tecnologia é guiada pelo desejo constante de aprender e evoluir, sempre com foco na entrega de soluções que façam a diferença. Atualmente, estou ampliando meus conhecimentos na área de Back-End, explorando JavaScript e TypeScript. Meu objetivo é me tornar um desenvolvedor Full-Stack, capaz de construir aplicações completas e robustas, desde o design visual até a lógica por trás dos sistemas. Com um olhar atento para inovação e boas práticas, busco crescer como profissional enquanto contribuo com ideias e projetos que conectem pessoas e transformem desafios em oportunidades. Vamos criar algo incrível juntos?
@@ -55,7 +57,7 @@
     </section>
 
     <!-- HABILIDADES -->
-    <section class="skills">
+    <section id="habilidades" class="skills" class="section reveal">
         <h2>Habilidades Técnicas</h2>
         <div class="skills-container">
             <!-- Caixa HTML -->
@@ -84,14 +86,14 @@
 
 
     <!-- PROJETOS (dinâmico) -->
-    <section id="projetoss" class="section">
+    <section id="projetoss" class="section" class="section reveal">
         <h2>Projetos</h2>
 
         <div id="lista-projetos"></div>
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="section">
+    <section id="contato" class="section" class="section reveal">
         <h2>Contato</h2>
 
         <form class="form-contato">
