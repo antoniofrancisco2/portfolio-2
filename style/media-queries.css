@@ -1,0 +1,101 @@
+/*MENU*/
+/*Desktop*/
+@media (min-width: 1024px) {
+
+    .hamburguer {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        opacity: 1 !important;
+        pointer-events: all !important;
+        transform: none !important;
+
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        width: auto;
+        padding: 0;
+        background: none;
+        border-radius: 0;
+    }
+}
+
+/*Hero*/
+/*Tablet+*/
+@media (min-width: 768px) {
+    .hero {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        max-width: 500px;
+    }
+
+    #img1 {
+        width: 300px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .hero {
+        padding: 200px;
+    }
+
+    #img1 {
+        width: 400px;
+    }
+}
+
+@media (min-width: 728px) {
+    #sobre p {
+        padding: 0px 50px;
+    }
+}
+
+/*HABILIDADES*/
+/*Tablet*/
+@media (min-width: 768px) {
+    .skills-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    .skills-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*PROJETOS*/
+/*Tablet*/
+@media (min-width: 768px) {
+    #lista-projetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    #lista-projetos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*CONTATO*/
+@media (min-width: 768px) {
+    .form-contato {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
